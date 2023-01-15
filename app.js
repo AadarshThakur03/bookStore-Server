@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 const bcrypt = require("bcryptjs");
-const PORT = process.env.PORT || 5000;
+const PORT = 80
 const cors = require("cors");
 
 app.use(cors());
