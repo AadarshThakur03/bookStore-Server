@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 const bcrypt = require("bcryptjs");
-const PORT = 80
+const PORT = 5000
 const cors = require("cors");
 
 app.use(cors());
@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 //Connecting to Mongo Db
 const mongoUri =
-  "mongodb+srv://admin:702168@cluster0.vpkqb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://admin:admin@cluster0.cheqvbk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const jwt = require("jsonwebtoken");
 
