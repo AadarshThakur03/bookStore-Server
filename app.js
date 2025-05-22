@@ -135,11 +135,14 @@ app.post("/register-social", async (req, res) => {
         error: "User already exists with same email",
       });
     }
+    console.log(req.body);
+    const guestId = `guest_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`;
     const user = await User.create({
       uname,
       email,
       profile,
       googleLogin: true,
+      guestId
     });
     res.json({ status: "success", data: user });
   } catch (error) {
